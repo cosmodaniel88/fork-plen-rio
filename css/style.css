@@ -1,0 +1,244 @@
+/* Estilo básico para o wrapper */
+.wrapper {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+/* Configuração do menu lateral */
+#sidebar {
+    width: 250px;
+    background-color: #343a40;
+    transition: width 0.3s ease;
+    min-height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Estilo quando o menu está recolhido */
+#sidebar.active {
+    width: 60px; /* Apenas o suficiente para mostrar os ícones */
+}
+
+/* Estilo para o conteúdo principal */
+.main {
+    flex-grow: 1;
+    margin-left: 250px;
+    transition: margin 0.3s ease;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+/* Ajusta o conteúdo quando o menu está recolhido */
+#sidebar.active > .main {
+    margin-left: 60px; /* Ajuste para coincidir com a largura do menu recolhido */
+}
+
+.recolher {
+    margin-left: 60px;
+}
+
+/* Estilo para os links no menu */
+.sidebar-nav {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.sidebar-nav .sidebar-item {
+    width: 100%;
+}
+
+.sidebar-nav .sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, padding 0.3s;
+}
+
+.sidebar-nav .sidebar-link i {
+    min-width: 30px;
+    text-align: center;
+}
+
+.sidebar-nav .sidebar-link span {
+    flex-grow: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+#sidebar.active .sidebar-link span {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Estilo para a logo do sidebar */
+.sidebar-logo {
+    font-size: 1.2rem;
+    padding: 15px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    
+}
+
+.sidebar-logo > a > img{
+    height: 50px;
+    width: 100%;
+}
+
+
+/* Botão de alternância do menu */
+.toggle-btn {
+    color: #fff;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* Estilo do link de logout */
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.sidebar-footer .sidebar-link {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 15px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar-footer .sidebar-link i {
+    min-width: 30px;
+    text-align: center;
+}
+
+/* Estilo dos badges nos cards */
+.badge {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Container dos avatares, posicionado absolutamente no canto superior direito */
+.avatar-container {
+    position: absolute;
+    right: 0;
+    display: flex; /* Usa flexbox para alinhar horizontalmente os avatares */
+    gap: 10px; /* Espaçamento entre cada avatar */
+    padding: 10px; /* Espaço interno ao redor do conteúdo */
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo branco semitransparente para destacar do fundo */
+    border-radius: 10px; /* Bordas arredondadas do contêiner */
+
+}
+
+/* Estilo de cada avatar individual */
+.avatar {
+    width: 50px; /* Largura fixa do avatar */
+    height: 50px; /* Altura fixa do avatar */
+    border-radius: 50%; /* Torna o avatar circular */
+    display: flex; /* Flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente a imagem dentro do avatar */
+    align-items: center; /* Centraliza verticalmente a imagem dentro do avatar */
+    cursor: pointer; /* Muda o cursor para indicar clicabilidade */
+    border: 2px solid transparent; /* Borda inicial transparente para transição suave em hover */
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; /* Transições suaves para hover */
+    overflow: hidden; /* Evita que a imagem saia do círculo */
+}
+
+/* Estilo da imagem dentro do avatar */
+.avatar img {
+    height: 100%; /* Define a altura para preencher o avatar */
+    width: auto; /* A largura é automática para manter as proporções */
+    min-width: 100%; /* A largura mínima é 100% para garantir cobertura total */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço disponível, mantendo as proporções */
+}
+
+/* Efeito de hover para avatares */
+.avatar:hover {
+    transform: scale(1.1); /* Aumenta o tamanho do avatar em 10% */
+    border-color: #00ff00; /* Muda a cor da borda para verde florescente */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Adiciona sombra verde ao redor do avatar */
+}
+
+
+/* Alinhar o cabeçalho das Tables */
+.table-header > th {
+    text-align: center;
+    align-content: center;
+}
+
+/* Alinhar o conteúdo das Tables */
+.table-content > td {
+    text-align: center;
+    align-content: center;
+    
+}
+
+#listMembros {
+    height: 200px;
+    width: 200px;
+    background-color: #28a745;
+}
+
+#top-header {
+    background-color: black;
+    width: 100vw;
+}
+.modal-body div {
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-top: 20px;
+    overflow-y: auto;
+    height: 150px; /* Fixa a altura e permite rolagem */
+}
+.voltar{
+    background-color: #00ff00;
+    display: block;
+    margin-left: -1000px;
+    
+}
+
+.bem-vindo{
+    margin-bottom: 30px;
+}
+
+.card-body-mod{
+  
+}
+
+.col-md-4-mod{
+    border: no;
+}
+
+.cabecalho{
+    background-color: #6C757D;
+    border-bottom: 1px solid rgb(221, 218, 218);
+    width: 85%;
+    position: fixed;
+    height: 80px;
+    margin-left: 269px;
+    
+    
+    
+}
+
+#content{
+    margin-top: 100px;
+}
+
+#botao{
+   position: absolute;
+   left: 0;
+}

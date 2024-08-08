@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+       
+        <div id="cabecalho"></div>
+
+        <!--Div Menu-->
+        <div id="menu"></div>
+        <!--FIm Div Menu-->
+
+        
+
+
+        <main class="main p-3">
+            <div id="content">
+
+                <h1 class="bem-vindo">Bem-vindo ao Plenário Virtual</h1>
+               
+                <div class="row">
+                    <div class="col-md-4 col-md-4-mod">
+                        <div class="card">
+                            
+                            <div class="card-header">
+                                Tarefas e Atividades
+                                <button class="btn btn-info float-right">
+                                    <i class="lni lni-reload"></i>
+                                </button>
+                            </div>
+
+                            <div class="card-body card-body-mod">
+                            
+                                <div class="list-group">
+                                    <a href="paginas/processos-recebidos.html"
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        Recebidos <span class="badge bg-success">10</span>
+                                    </a>
+                                    <a href="paginas/processos-pautados.html"
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        Pautados <span class="badge bg-success">10</span>
+                                    </a>
+                                    <a href="paginas/processos-destacados.html"
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        Destacados <span class="badge bg-success">25</span>
+                                    </a>
+                                    <a href="paginas/processos-aguardando-votacao.html"
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        Aguardando Votação <span class="badge bg-success">15</span>
+                                    </a>
+                                    <a href="#"
+                                        class="list-group-item d-flex justify-content-between align-items-center">
+                                        Sessões Encerradas <span class="badge bg-success">100</span>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de Chat -->
+    <div class="modal fade" id="chatModal" tabindex="-1" aria-labelledby="chatModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="chatModalLabel">Chat</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="chatMessage">Digite sua mensagem:</label>
+                        <textarea class="form-control" id="chatMessage" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary mt-2">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous" defer></script>
+    <script src="/script/script.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Carregar o menu
+            loadMenu();
+
+            // Inicializar eventos de clique no modal se necessário
+            const avatars = document.querySelectorAll('.avatar');
+            avatars.forEach(avatar => {
+                avatar.addEventListener('click', function () {
+                    // Lógica personalizada ao abrir o modal, se necessário
+                    console.log('Avatar clicado!');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
