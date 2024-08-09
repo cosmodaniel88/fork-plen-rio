@@ -76,8 +76,9 @@ function loadCabecalho() {
         .then(html => {
             const menuElement = document.getElementById('cabecalho');
             if (menuElement) {
+                
                 menuElement.innerHTML = html;
-                initializeMenu(); // Inicializa eventos do menu
+              
             } else {
                 console.error('Elemento #menu não encontrado.');
             }
@@ -93,12 +94,24 @@ function loadCabecalho() {
 function initializeMenu() {
     const toggleButton = document.querySelector('.toggle-btn');
     const sidebar = document.getElementById('sidebar');
-    const menu = document.querySelector('.p-3')
+   
+
     if (toggleButton && sidebar) {
         toggleButton.addEventListener('click', function() {
-            sidebar.classList.toggle('active');
-            document.getElementById("p-3").classList.toggle('recolher');
+            
+            sidebar.classList.toggle('active');     
+           recolher();
         });
+  
+    }
+
+    function recolher(){
+
+        const conteudo = document.querySelector('#content');
+
+        if(conteudo){ 
+            conteudo.classList.toggle('recolher'); /*Só ajusta o css agora*/
+            }
     }
 
     // Eventos de clique nos links do menu
@@ -158,4 +171,5 @@ document.addEventListener('DOMContentLoaded', function() {
     loadMenu(); // Carrega o menu na inicialização
     initializeAvatars(); // Inicializa eventos dos avatares na carga inicial
     loadCabecalho();
+   
 });

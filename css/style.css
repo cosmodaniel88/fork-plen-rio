@@ -32,10 +32,6 @@
     background-color: #f8f9fa;
 }
 
-/* Ajusta o conteúdo quando o menu está recolhido */
-#sidebar.active > .main {
-    margin-left: 60px; /* Ajuste para coincidir com a largura do menu recolhido */
-}
 
 .recolher {
     margin-left: 60px;
