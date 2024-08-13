@@ -99,15 +99,20 @@ function initializeMenu() {
     if (toggleButton && sidebar) {
         toggleButton.addEventListener('click', function() {
             
-            sidebar.classList.toggle('active');     
+            sidebar.classList.toggle('active');
+           
+            let x = 0;
+            if(x === 0){
            recolher();
+            x = 1;
+            }
         });
   
     }
 
     function recolher(){
 
-        const conteudo = document.querySelector('#content');
+        const conteudo = document.querySelector('#container');
 
         if(conteudo){ 
             conteudo.classList.toggle('recolher'); /*Só ajusta o css agora*/
@@ -169,7 +174,8 @@ window.onpopstate = function(event) {
 // Inicialização
 document.addEventListener('DOMContentLoaded', function() {
     loadMenu(); // Carrega o menu na inicialização
-    initializeAvatars(); // Inicializa eventos dos avatares na carga inicial
     loadCabecalho();
+    initializeAvatars(); // Inicializa eventos dos avatares na carga inicial
+   
    
 });

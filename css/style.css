@@ -32,6 +32,10 @@ body{
     width: 60px; /* Apenas o suficiente para mostrar os ícones */
 }
 
+#sidebar.active ~ #container{
+    
+}
+
 /* Estilo para o conteúdo principal */
 .main {
     position: relative;
@@ -46,7 +50,7 @@ body{
 
 
 .recolher {
-    margin-left: 60px;
+   margin-left: 80px !important;
 }
 
 /* Estilo para os links no menu */
@@ -248,11 +252,14 @@ body{
    left: 0;
 }
 
-#container{
-    position: relative;
-    background-color: red;
-    width: 100%;
+.margins-container{
     margin-left: 269px;
     margin-right: 10px;
+}
+
+#container{
+    position: relative;
+ 
+    width: 100%;
     
 }
